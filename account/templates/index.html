@@ -14,8 +14,8 @@
   </head>
   <body>
 
-    <link rel="icon" href="./img/coronavirus.png">
-    <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+    <link rel="icon" href="{% static 'img/coronavirus.png' %}">
+    <link href="{% static 'css/index.css' %}" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>NGO</title>
   </head>
@@ -23,7 +23,7 @@
     <!--Navbar-->
     <nav class="navbar navbar-fixed navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">
-          <img src="./img/mask.png" height="100px" width='100px" alt='logo'>
+          <img src="{% static 'img/mask.png' %}" height="100px" width='100px" alt='logo'>
         </a>
         <h1 id='title' class="ml-5">CoviFree</h1>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -59,11 +59,11 @@
                 </blockquote>
             </div>
             <div class="col-12  col-md-6 justify-content-center align-self-center text-center">
-              <a role="button" class="btn btn-block btn-success" style="width: 50%; margin: auto; margin-bottom: 10px;" href="tel:8329563290">
-                <span class="fa fa-phone fa-lg"></span>
-                CALL US!
+              <a role="button" class="btn btn-block btn-success" style="width: 50%; margin: auto; margin-bottom: 10px;" href="mailto:T017.Scrapshut@gmail.com" >
+                <span class="fa fa-envelope fa-lg"></span>
+                MAIL TO!
               </a>
-              <a role="button" class="btn btn-block btn-danger" style="width: 50%; margin: auto;" href="#">
+              <a role="button" class="btn btn-block btn-danger" style="width: 50%; margin: auto;" href="https://www.payumoney.com/paybypayumoney/#/A345EB66D626235B3A153B88BB758D91" target = '_blank'>
                 <span class="fa fa-heart fa-lg"></span>
                 DONATE
               </a>
@@ -82,37 +82,37 @@
                 <div id="mycarousel" class="carousel slide" data-ride="carousel" data-interval="3000">
                     <div class="carousel-inner" role="listbox">
                         <div class="carousel-item active">
-                            <img class="d-block img-fluid" height="200px" width="300px" src="./img/india.png">
+                            <img class="d-block img-fluid" height="200px" width="300px" src="{% static 'img/india.png' %}">
                             <div class="carousel-caption d-block">
                                
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img class="d-block img-fluid"  height="200px" width="300px" src="./img/mechanical_ventilator_PNG29.png">
+                            <img class="d-block img-fluid"  height="200px" width="300px" src="{% static 'img/mechanical_ventilator_PNG29.png' %}">
                             <div class="carousel-caption d-block">
                                 
                             </div>                                
                         </div>
                         <div class="carousel-item">
-                            <img class="d-block img-fluid" height="200px" width="300px" src="./img/—Pngtree—n95 mask disposable blue mask_5330188.png">
+                            <img class="d-block img-fluid" height="200px" width="300px" src="{% static 'img/—Pngtree—n95 mask disposable blue mask_5330188.png' %}">
                             <div class="carousel-caption d-block">
                                
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img class="d-block img-fluid" height="200px" width="300px" src="./img/india.png">
+                            <img class="d-block img-fluid" height="200px" width="300px" src="{% static 'img/india.png' %}">
                             <div class="carousel-caption d-block">
                                 
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img class="d-block img-fluid"height="200px" width="300px" src="./img/coronavirus.png">
+                            <img class="d-block img-fluid"height="200px" width="300px" src="{% static 'img/coronavirus.png' %}">
                             <div class="carousel-caption d-block">
                                
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img class="d-block img-fluid"height="200px" width="300px" src="./img/gmail.png">
+                            <img class="d-block img-fluid"height="200px" width="300px" src="{% static 'img/gmail.png' %}">
                             <div class="carousel-caption d-block">
                                 
                             </div>
@@ -149,7 +149,7 @@
       </p>
       <div class="row">
       <div class='col-md-5 col-sm-12 '>
-      <img class="covid-response" src="./img/covid-response.jpg" alt="Infra">
+      <img class="covid-response" src="{% static 'img/covid-response.jpg' %}" alt="Infra">
       </div>
       <div class="col-md-7 col-sm-12 ">
       CoviFare Foundation demonstrated its commitment and capacity to rise up to the situation during the response to the COVID-19 crisis. In collaboration with the Brihanmumbai Municipal Corporation (BMC), CoviFare Foundation set up the first, COVID-19 dedicated hospital in Mumbai in just two weeks. With the focus on treating patients with COVID-19, all beds are equipped with the required infrastructure, bio-medical equipment such as ventilators, pacemakers, dialysis machine and patient monitoring devices.
@@ -166,7 +166,7 @@
         In rural areas, GP and Self-Help Groups (SHG) supported and mentored by Reliance Foundation have helped address various challenges related to the pandemic. In many villages, they have taken the lead to create awareness on COVID-19 and put in place the necessary precautionary measures. For example, community initiatives were established to stitch masks and distribute them to frontline workers.
       </div>
        <div class="col-md-6 col-sm-12">
-         <img src="./img/rural.jpg" alt="ruralIndia">
+         <img src="{% static 'img/rural.jpg' %}" alt="ruralIndia">
        </div>
     </div>
     </main><!--Added main section-->
