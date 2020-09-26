@@ -7,8 +7,21 @@
 <body>
 <form method="post">
     {% csrf_token %}
-    {{form.as_p}}
+    {% if errors %}
+    {{errors}}
+    {% endif %}
+    <label>Enter Email</label>
+    {{form.username}}
+    <br>
+
+    <label>Enter Password</label>
+    {{form.password}}
+<br>
     <input type="submit" value="Login">
+
 </form>
+
+<br>
+<div class='pm-button'><a href='https://www.payumoney.com/paybypayumoney/#/D7EEF7E6CDCBA7C15AB83DCBA0108F68'><img src='https://www.payumoney.com/media/images/payby_payumoney/new_buttons/22.png' /></a></div>
 </body>
 </html>
