@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Donated By</title>
+</head>
+<body>
+<h1>Donations By People</h1>
+
+{% for item in items %}
+    Donated Item: {{ item.donated_item.item_name }} <br>
+    Donated By: {{ item.donated_by.first_name }}  {{ item.donated_by.last_name }} <br>
+    Donated on : {{ item.donated_on }}<br>
+    Donated Quantity: {{ item.donated_quantity }}<br>
+    <hr>
+{% endfor %}
+</body>
+</html>

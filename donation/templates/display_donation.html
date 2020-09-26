@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Display Donation</title>
+</head>
+<body>
+<h1>Donated Items</h1>
+{% if items %}
+<h1>Items Exist</h1>
+{% endif %}
+{% for item in items %}
+   Item Id:  {{ item.id }} <br>
+   item type : {{ item.item_type }}<br>
+Item Name :{{ item.item_name }}<br>
+Available Quantity: {{ item.quantity_available }}<br>
+    Required Quantity : {{ item.quantity_required }}
+    <hr>
+{% endfor %}
+</body>
+</html>

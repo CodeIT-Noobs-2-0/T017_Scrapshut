@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HOME</title>
+</head>
+<body>
+{{user}}<br>
+
+<a href="{% url 'signup' %}">DONOR REGISTERATION</a>
+<br>
+<a href="{%  url 'ngoAdminSignup' %}">NGO ADMIN REGISTERATION</a>
+<br>
+<a href='{% url 'login' %}'>LOGIN </a>
+<br>
+<a href="{% url 'register-donation' %}">REGISTER DONATION</a>
+<br>
+<a href="{% url 'register-donated-by' %}">REGISTER DONATED BY</a>
+<br>
+<a href="{% url 'display_donation' %}">DISPLAY DONATION</a>
+<br>
+<a href="{% url 'display_donated_by' %}">DISPLAY DONATED BY</a>
+<br>
+
+{% if user.is_donor %}
+
+<h1>Donor Confirmed</h1>
+{% endif %}
+{% if user.is_ngo_admin %}
+<h1>NGO ADMIN Confirmed</h1>
+{% endif %}
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+</head>
+<body>
+<h1> Welcome {{user}} </h1>
+Is Donor : {{user.is_donor}}<br>
+Is NGO_ADMIN : {{user.is_ngo_admin}}</br>
+email : {{ user.email }}
+<br>
+<a href="{% url 'logout' %}">LOGOUT</a>
+</body>
+</html>

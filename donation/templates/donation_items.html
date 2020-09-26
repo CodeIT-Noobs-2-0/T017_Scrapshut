@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Donation Items</title>
+</head>
+<body>
+
+<form action="{% url 'register-donation' %}" method = "POST">
+    {% csrf_token  %}}
+    {{ form.as_p }}
+ <input type="submit" id="register" >
+</form>
+
+{% for item in form %}
+    {{ item.as_p }}
+{% endfor %}
+</body>
+</html>
