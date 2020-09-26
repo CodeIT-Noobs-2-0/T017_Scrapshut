@@ -1,9 +1,5 @@
 from donation.views import register_donation, display_donation, display_donated_by, register_donated_by
-
 from django.urls import include, path
-
-
-
 
 urlpatterns = [
 

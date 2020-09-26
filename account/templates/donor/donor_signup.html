@@ -1,6 +1,14 @@
-{% extends 'base.html' %}
-
-{% block content %}
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+</head>
+<body>
+  {% block content %}
   <h2>DONOR Sign up</h2>
   <form method="post">
     {% csrf_token %}
@@ -19,3 +27,7 @@
     <button type="submit">Sign up</button>
   </form>
 {% endblock %}
+</body>
+</html>
+
+

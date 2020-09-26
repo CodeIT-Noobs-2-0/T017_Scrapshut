@@ -1,29 +1,23 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>HOME</title>
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
 </head>
 <body>
 {{user}}<br>
-
-<a href="{% url 'signup' %}">DONOR REGISTERATION</a>
-<br>
-<a href="{%  url 'ngoAdminSignup' %}">NGO ADMIN REGISTERATION</a>
-<br>
-<a href='{% url 'login' %}'>LOGIN </a>
-<br>
-<a href="{% url 'register-donation' %}">REGISTER DONATION</a>
-<br>
-<a href="{% url 'register-donated-by' %}">REGISTER DONATED BY</a>
-<br>
-<a href="{% url 'display_donation' %}">DISPLAY DONATION</a>
-<br>
-<a href="{% url 'display_donated_by' %}">DISPLAY DONATED BY</a>
-<br>
+<a href="{% url 'index' %}">INDEX </a><br>
+<a href="{% url 'signup' %}">DONOR REGISTERATION</a><br>
+<a href="{%  url 'ngoAdminSignup' %}">NGO ADMIN REGISTERATION</a><br>
+<a href='{% url 'login' %}'>LOGIN </a><br>
+<a href="{% url 'register-donation' %}">REGISTER DONATION</a><br>
+<a href="{% url 'register-donated-by' %}">REGISTER DONATED BY</a><br>
+<a href="{% url 'display_donation' %}">DISPLAY DONATION</a><br>
+<a href="{% url 'display_donated_by' %}">DISPLAY DONATED BY</a><br>
 
 {% if user.is_donor %}
-
 <h1>Donor Confirmed</h1>
 {% endif %}
 {% if user.is_ngo_admin %}

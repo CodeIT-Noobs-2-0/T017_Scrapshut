@@ -7,11 +7,9 @@ def register_donation(request):
     if request.method == 'POST':
         form = DonationRegisterForm(request.POST)
         if form.is_valid():
-
             item_name = form.cleaned_data['item_name']
             item_type = form.cleaned_data['item_type']
             quantity_required = form.cleaned_data['quantity_required']
-            quantity_available = form.cleaned_data['quantity_available']
             u = form.save(commit=False)
             user = form.save()
             user.save()
