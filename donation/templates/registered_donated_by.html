@@ -22,18 +22,25 @@
           <ul class="navbar-nav ml-auto">
           
             <li class="nav-item active mr-4">
-              <a class="nav-link fa fa-lg fa-home" href="#">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link fa fa-lg fa-home" href="{% url "index" %}">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item mr-4">
-              <a class="nav-link fa fa-lg fa-book" href="#">Requirements </a>
+              <a class="nav-link fa fa-lg fa-book" href="{% url "display_donation" %}">Requirements </a>
             </li>
             <li class="nav-item mr-4">
-              <a class="nav-link fa fa-lg fa-heart" href="#">Donations</a>
+              <a class="nav-link fa fa-lg fa-heart" href="{% url "display_donated_by %}">Donations</a>
             </li>
-    
-            <li class="nav-item mr-4">
-            <a href="#" class="nav-link fa fa-lg fa-sign-in ">Login</a>
+            {% if user.is_authenticated %}
+                <li class="nav-item mr-4">
+            <a href="{% url "logout" %}" class="nav-link fa fa-lg fa-sign-in ">Logout</a>
             </li>
+
+              {% else %}
+                <li class="nav-item mr-4">
+            <a href="{% url "login" %}" class="nav-link fa fa-lg fa-sign-in ">Login</a>
+            </li>
+              {% endif %}
+
           </ul>
         </div>
       </nav>
@@ -49,19 +56,19 @@
                         <form action="{% url 'register-donated-by' %}" method = "POST">
                             {% csrf_token  %}
                             {{ form.as_p }}
+                            <div class="card-footer align-self-center" style="width: 100%;background-color: #ffb280;">
+                        <center>
+                            <input type="submit" class="btn btn-primary" id="register" >
+                        </center>
+                    </div>
                         </form>
                     </div>
-                    <div class="card-footer align-self-center" style="width: 100%;background-color: #ffb280;">
-                        <center><input type="submit" class="btn btn-primary" id="register" ></center>
-                    </div>              
+
               </div>
             </div>
         </div>
     </div>
 
-{% for item in form %}
-    {{ item.as_p }}
-{% endfor %}
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

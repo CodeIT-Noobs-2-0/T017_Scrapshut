@@ -6,7 +6,9 @@
     <title>Donated By</title>
     <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
 </head>
+
 <body>
+{% if user.is_ngo_admin %}
 <h1>Donations By People</h1>
 {% for item in items %}
     Donated Item: {{ item.donated_item.item_name }} <br>
@@ -14,5 +16,9 @@
     Donated on : {{ item.donated_on }}<br>
     Donated Quantity: {{ item.donated_quantity }}<hr>
 {% endfor %}
+{% else %}
+<h1>Unauthorized Access. You need to be a NGO Admin to see this</h1>
+{% endif %}
 </body>
+
 </html>

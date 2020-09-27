@@ -42,15 +42,22 @@
             <li class="nav-item  mr-4">
               <a class="nav-link fa fa-lg fa-heart" href="{% url 'display_donated_by' %}">Donations</a><!--Connect to display donated by-->
             </li>
-            <li class="nav-item mr-4">
-            <a href="{% url 'login' %}" class="nav-link fa fa-lg fa-sign-in ">Login</a>
+            {% if user.is_authenticated %}
+                <li class="nav-item mr-4">
+            <a href="{% url "logout" %}" class="nav-link fa fa-lg fa-sign-in ">Logout</a>
             </li>
+
+              {% else %}
+                <li class="nav-item mr-4">
+            <a href="{% url "login" %}" class="nav-link fa fa-lg fa-sign-in ">Login</a>
+            </li>
+              {% endif %}
           </ul>
         </div>
     </nav><!--End of Navbar-->
     {{user}}<br>
 
-<a href="{% url 'signup' %}">DONOR REGISTERATION</a><br>
+<a href="{% url "signup" %}">DONOR REGISTERATION</a><br>
 <a href="{%  url 'ngoAdminSignup' %}">NGO ADMIN REGISTERATION</a><br>
 <a href='{% url 'login' %}'>LOGIN </a><br>
 <a href="{% url 'register-donation' %}">REGISTER DONATION</a><br>

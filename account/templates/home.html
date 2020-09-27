@@ -7,7 +7,9 @@
     <link href="{% static 'css/index.css' %}" rel="stylesheet" />
 </head>
 <body>
-{{user}}<br>
+{% if user.is_authenticated %}
+Welcome {{user}}<br>
+{% endif %}
 <a href="{% url 'index' %}">INDEX </a><br>
 <a href="{% url 'signup' %}">DONOR REGISTERATION</a><br>
 <a href="{%  url 'ngoAdminSignup' %}">NGO ADMIN REGISTERATION</a><br>
