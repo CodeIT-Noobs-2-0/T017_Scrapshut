@@ -48,9 +48,10 @@ nav{
     position: relative;
 }
 .social{
-    margin-right: 5px;
+    margin-right: 15px;
     margin-top: 10px;
-    border-radius: 25%;
+    border-radius: 40%;
+    width: 70px;
 }
 .fa-instagram{
     background-color: #f40083;
@@ -123,7 +124,7 @@ span{
 .rural{
     margin-top: 10px;
 }
-header_h2{
+.header_h2{
     font-family: 'Bebas Neue', cursive;
 }
 .background{
