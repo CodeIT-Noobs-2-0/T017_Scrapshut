@@ -5,8 +5,7 @@ from .models import *
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 
-def home(request):
-    return render(request, 'home.html')
+
 
 def index(request):
     return render(request,'index.html')
@@ -21,7 +20,7 @@ def donorSignup(request):
             role = form.cleaned_data.get('role')
             print(role)
             login(request, user)
-            return redirect('home')
+            return redirect('index')
     else:
         form = DonorSignUpForm()
     return render(request, 'donor/donor_signup.html', {'form': form})
@@ -34,7 +33,7 @@ def ngo_adminSignup(request):
             username = form.cleaned_data.get('username')
             password = form.cleaned_data.get('password1')
             login(request, user)
-            return redirect('home')
+            return redirect('index')
     else:
         form = NGO_Admin_SignUpForm()
     return render(request, 'ngo_admin/ngoAdminSignup.html', {'form': form})

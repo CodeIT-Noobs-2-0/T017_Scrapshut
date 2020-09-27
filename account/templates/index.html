@@ -34,18 +34,36 @@
           <ul class="navbar-nav ml-auto">
           
             <li class="nav-item active mr-4">
-              <a class="nav-link fa fa-lg fa-home" href="#">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link fa fa-lg fa-home" href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a>
             </li>
-          
-            <li class="nav-item mr-4">
-              <a class="nav-link fa fa-lg fa-info" href="#">AboutUs</a>
+            <li class="nav-item  mr-4">
+              <a class="nav-link fa fa-lg fa-book" href="{% url 'display_donation' %}">Requirements </a><!--Connect to display donation-->
+            </li>
+            <li class="nav-item  mr-4">
+              <a class="nav-link fa fa-lg fa-heart" href="{% url 'display_donated_by' %}">Donations</a><!--Connect to display donated by-->
             </li>
             <li class="nav-item mr-4">
-            <a href="#" class="nav-link fa fa-lg fa-sign-in ">Login</a>
+            <a href="{% url 'login' %}" class="nav-link fa fa-lg fa-sign-in ">Login</a>
             </li>
           </ul>
         </div>
     </nav><!--End of Navbar-->
+    {{user}}<br>
+
+<a href="{% url 'signup' %}">DONOR REGISTERATION</a><br>
+<a href="{%  url 'ngoAdminSignup' %}">NGO ADMIN REGISTERATION</a><br>
+<a href='{% url 'login' %}'>LOGIN </a><br>
+<a href="{% url 'register-donation' %}">REGISTER DONATION</a><br>
+<a href="{% url 'register-donated-by' %}">REGISTER DONATED BY</a><br>
+<a href="{% url 'display_donation' %}">DISPLAY DONATION</a><br>
+<a href="{% url 'display_donated_by' %}">DISPLAY DONATED BY</a><br>
+
+{% if user.is_donor %}
+<h1>Donor Confirmed</h1>
+{% endif %}
+{% if user.is_ngo_admin %}
+<h1>NGO ADMIN Confirmed</h1>
+{% endif %}
     <div class="jumbotron" id="welcome">
       <div class="container-fluid">
         <div class="row">
@@ -182,7 +200,7 @@
                      Mumbai.<br>
                      <i class="fa fa-phone fa-lg"></i> : +91 9175152428<br>
                      <i class="fa fa-envelope fa-lg"></i> : 
-                     abc@gmail.com
+                     T017.Scrapshut@gmail.com
                  </address>
               </div>
               <div class="col-sm-5 offset-1">

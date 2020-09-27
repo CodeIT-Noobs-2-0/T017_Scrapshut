@@ -20,7 +20,6 @@ django-allauth==0.42.0
 django-crispy-forms==1.9.0
 django-filter==2.3.0
 django-model-utils==4.0.0
-django-quiz-app==0.5.1
 django-registration==3.1
 django-rest-auth==0.9.5
 django-rest-knox==4.1.0

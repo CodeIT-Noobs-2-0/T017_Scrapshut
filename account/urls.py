@@ -6,8 +6,7 @@ from account import views
 
 urlpatterns = [
 
-    path('', views.home, name = 'home'),
-    path('index/',views.index, name='index'),
+    path('',views.index, name='index'),
     path('signup/', views.donorSignup, name='signup'),
     path('ngoadminSignup/', views.ngo_adminSignup, name='ngoAdminSignup'),
     path('login/', auth_views.LoginView.as_view(),{'template_name': 'registration/login.html'}, name='login'),

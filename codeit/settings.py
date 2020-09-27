@@ -132,7 +132,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 AUTH_USER_MODEL = "account.User"
-LOGIN_REDIRECT_URL = "home"
+LOGIN_REDIRECT_URL = "index"
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static_in_project')

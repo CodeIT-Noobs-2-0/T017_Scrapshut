@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 .nav-link:hover{
     
     font-weight: bold;
@@ -72,6 +73,13 @@ nav{
     margin-top: 10px;
     padding: 10px;
 }
+.btn-block{
+    background-color: #ffb280;
+    border-color: silver;
+}
+.btn-block:hover{
+    background-color:#ffb280 ;
+}
 .main-heading{
     font-family: 'Great Vibes', cursive;
     font-size: 40px;
@@ -114,4 +122,13 @@ span{
 }
 .rural{
     margin-top: 10px;
+}
+header_h2{
+    font-family: 'Bebas Neue', cursive;
+}
+.background{
+    background-image: url('https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/rm21-light-0531-teddy-9_1.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=eef5b53a758aff72f4dc9b1c2543588e')
+    background-position: center;
+    background-size: cover;
+    background-repeat:no-repeat;
 }
