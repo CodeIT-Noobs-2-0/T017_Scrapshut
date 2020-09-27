@@ -15,7 +15,7 @@ def register_donation(request):
             user.save()
             return redirect('/')
     else:
-        form = DonationRegisterForm(request.POST)
+        form = DonationRegisterForm()
     return render(request, 'donation_items.html', {'form': form})
 
 def register_donated_by(request):
@@ -30,7 +30,7 @@ def register_donated_by(request):
             user.save()
             return redirect('/')
     else:
-        form = DonatedByRegistrationForm(request.POST)
+        form = DonatedByRegistrationForm()
     return render(request, 'registered_donated_by.html', {'form': form})
 
 def display_donation(request):

@@ -4,8 +4,8 @@ from donation.models import *
 class DonationRegisterForm(forms.ModelForm):
     class Meta:
         model = DonationItem
-        item_name = forms.CharField(max_length=255, help_text='Item Name')
-        item_type = forms.CharField(max_length=255, help_text='Item Type')
+        item_name = forms.CharField(max_length=255, help_text='Item Name' )
+        item_type = forms.CharField(max_length=255, help_text='Item Type' )
         quantity_required = forms.IntegerField(help_text='Quantity Required')
         fields = ['item_name', 'item_type', 'quantity_required',]
 

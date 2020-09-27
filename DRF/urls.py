@@ -19,8 +19,10 @@ urlpatterns = [
     path('ngo-admin-display/', NGOAdminDisplayView.as_view(), name='ngo-admin-display-all'),
     path('ngo-admin-display/<int:pk>/', NGOAdminDisplayView.as_view(), name='ngo-admin-display-single'),
 
-    path('donated-display/', DonatedDisplayView.as_view(), name='donated-display-all'),
-    path('donated-display/<int:pk>/', DonatedDisplayView.as_view(), name='donated-display-single'),
+    path('user-register/', RegisterUser.as_view(), name='user-register'),
+    path('donor-register/', RegisterDonor.as_view(), name='donor-register'),
+    path('ngo-admin-register/', RegisterNGOAdmin.as_view(), name='ngo-admin-register'),
+
 
     path('', include('rest_framework.urls')),
     path('login/', LoginView.as_view(), name='knox_login'),
